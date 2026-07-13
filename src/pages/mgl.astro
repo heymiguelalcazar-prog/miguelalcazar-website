@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="MGL">
+
+  <main>
+    <section class="profile">
+
+      <div class="portrait">
+        <img
+          src="/images/retrato.PNG"
+          alt="Miguel Alcázar"
+        />
+      </div>
+
+      <div class="text">
+        <p>
+          Miguel Alcázar nació en 1987 y creció en la provincia de Albacete.
+        </p>
+
+        <p>
+          Es autor de estos <a href="/txts">libros de ficción</a>.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+</Layout>
+
+<style>
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1000px;
+}
+
+.portrait {
+  flex: none;
+}
+
+.portrait img {
+  width: 300px;
+  height: auto;
+  display: block;
+}
+
+.text {
+  max-width: 600px;
+}
+
+.text p {
+  font-size: 22px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+
+.text a:link,
+.text a:visited {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .2s ease;
+}
+
+.text a:hover,
+.text a:focus,
+.text a:active {
+  color: #4f7fcf;
+}
+
+@media (max-width: 800px) {
+
+  main {
+    padding: 40px 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .portrait img {
+    width: 240px;
+  }
+
+  .text {
+    max-width: 600px;
+  }
+
+  .text p {
+    font-size: 22px;
+  }
+
+}
+
+</style>

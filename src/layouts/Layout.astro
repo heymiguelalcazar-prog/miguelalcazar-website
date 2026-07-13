@@ -1,0 +1,211 @@
+---
+import Logo from "../components/Logo.astro";
+
+const { title = "Miguel Alcázar" } = Astro.props;
+---
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>{title}</title>
+  <link rel="icon" type="image/png" href="/images/favicon.PNG" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap"
+    rel="stylesheet"
+  />
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="logo">
+    <Logo />
+  </div>
+
+
+<nav class="menu">
+  <a href="/mgl">MGL</a>
+  <a href="/txts">TXTS</a>
+  <a href="/cntxt">CNTXT</a>
+  <a href="/cntct">CNTCT</a>
+</nav>
+
+
+</header>
+
+
+
+<main class="page">
+
+  <slot />
+
+</main>
+
+
+
+</body>
+
+
+
+</html>
+
+
+<style>
+
+body {
+
+  margin:0;
+
+  background:#fff;
+
+  color:#111;
+
+  font-family:"Source Serif 4", serif;
+
+}
+
+
+/* HEADER */
+
+header {
+
+  width:100%;
+
+  padding-top:50px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+}
+
+
+.logo {
+
+  margin-bottom:35px;
+
+}
+
+
+/* MENU */
+
+.menu {
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:32px;
+
+}
+
+
+.menu a {
+
+  font-family:"Inter", sans-serif;
+
+  font-size:18px;
+
+  font-weight:400;
+
+  color:#111;
+
+  text-decoration:none;
+
+  transition:color .2s ease;
+
+}
+
+
+.menu a:hover {
+
+  color:#315a8a;
+
+}
+
+
+/* CONTENEDOR GENERAL DE TODAS LAS PÁGINAS */
+
+.page {
+
+  width:100%;
+
+  max-width:1400px;
+
+  margin:0 auto;
+
+  padding:60px 20px;
+
+  box-sizing:border-box;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+  header {
+
+    padding-top:40px;
+
+  }
+
+
+  .logo {
+
+    margin-bottom:30px;
+
+  }
+
+
+  .menu {
+
+    gap:24px;
+
+  }
+
+
+  .menu a {
+
+    font-size:16px;
+
+  }
+
+
+  .page {
+
+    padding:40px 20px;
+
+  }
+
+
+}
+
+
+</style>

@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Book from "../components/Book.astro";
+---
+
+<Layout title="TXTS">
+
+  <main>
+
+    <Book
+      title="Manuscritos no solicitados"
+      year="2025"
+      publisher="Jot Down Books"
+      cover="/images/books/manuscritos.png"
+      side="right"
+      description={`Los manuscritos no solicitados: aquellos que los autores envían con ilusión y esperanza a editoriales y agencias literarias pero que son habitualmente ignorados pues nadie ve en ellos el suficiente potencial literario y comercial.
+
+Los manuscritos no solicitados: una literatura invisible y menospreciada que también forma parte del ecosistema de los libros y a la que, hasta ahora, nadie ha prestado el debido cariño y atención.
+
+Hasta ahora, decimos, que Miguel Alcázar ha buceado en los archivos de una importante agencia literaria para seleccionar un centenar de estos manuscritos, resumiendo sus sorprendentes e hilarantes argumentos en un juguetón compendio de propuestas (entre ellas: una novela protagonizada por tornillos y arandelas, un plagio involuntario de <em>Las ciudades invisibles</em> de Calvino o un cuento infantil sobre las ventajas de estudiar una oposición) que, apostamos el precio de este libro, dejará boquiabierto a cualquier lector.`}
+    />
+
+    <Book
+      title="La crítica literaria en los noventa"
+      year="2024"
+      publisher="La Uña Rota"
+      cover="/images/books/critica.jpg"
+      side="left"
+      description={`La crítica literaria de la década de los años noventa del siglo pasado, ¿cómo no rememorarla con afecto, si uno se precia de ser buen lector?
+
+¿Cómo no recordar a críticos como Francisco Aldeanueva, Ágata Villacastín, Noel Carrascosa o María de Manuel Solís? ¿Cómo no periódicos como <em>La Tribuna</em> o <em>La Gaceta</em>, y revistas como <em>Futuras Lecturas</em>, <em>Índole</em>, o el suplemento <em>Letras</em>, del desaparecido <em>El Peninsular</em>?
+
+En esta antología fragmentaria, Miguel Alcázar nos propone realizar un viaje definitivo hacia la historia reciente de nuestra literatura, en un compendio de casi trescientas reseñas que, desde una actitud ciertamente irreverente, exponen la disociación que siempre se da entre literatura y vida, entre nuestras flaquezas humanas y nuestro muy preciado hábito lector.
+
+De inspiración borgiana y cervantina ‒aquí de ninguna obra se hace escarnio‒, <em>La crítica literaria en los noventa</em> supone un brillante ejercicio de estilo, a la vez que una aproximación sin igual a nuestro pasado literario desde el homenaje y un descacharrante sentido del humor.`}
+    />
+
+  </main>
+
+</Layout>
+
+
+<style>
+
+main {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (max-width: 700px) {
+
+  main {
+    width: 100%;
+    padding-top: 40px;
+  }
+
+}
+
+</style>

@@ -1,0 +1,72 @@
+<header class="header">
+
+  <a href="/mgl" class="logo">
+    <img 
+      src="/images/mgl.png" 
+      alt="MGL"
+    />
+  </a>
+
+  <nav class="menu">
+    <a href="/mgl">MGL</a>
+    <a href="/txts">TXTS</a>
+    <a href="/cntxt">CNTXT</a>
+  </nav>
+
+</header>
+
+<style>
+
+.header{
+  max-width:1000px;
+  margin:0 auto;
+  padding:50px 60px 0;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:35px;
+}
+
+
+.logo img{
+  width:220px;
+  height:auto;
+  display:block;
+}
+
+
+.menu{
+  display:flex;
+  gap:32px;
+}
+
+
+.menu a{
+  font-family:"Inter",sans-serif;
+  font-size:.9rem;
+  color:#111;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+
+
+.menu a:hover{
+  color:#777;
+}
+
+
+@media(max-width:800px){
+
+  .header{
+    padding:40px 30px 0;
+  }
+
+
+  .logo img{
+    width:180px;
+  }
+
+}
+
+</style>

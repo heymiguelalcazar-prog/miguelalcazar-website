@@ -1,0 +1,234 @@
+---
+const {
+  title,
+  year,
+  publisher,
+  cover,
+  description = "",
+  side = "left"
+} = Astro.props;
+
+const paragraphs = description ? description.split("\n\n") : [];
+---
+
+
+<article class={`book ${side}`}>
+
+
+  <div class="cover">
+
+
+    <img src={cover} alt={title} />
+
+
+    <div class="caption">
+
+      {publisher}, {year}
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="info">
+
+
+    <h2>
+
+      {title}
+
+    </h2>
+
+
+
+    <div class="description">
+
+
+      {
+        paragraphs.map((paragraph) => (
+          <p set:html={paragraph}></p>
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+
+</article>
+
+
+
+<style>
+
+
+.book{
+
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto 80px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:120px;
+
+}
+
+
+
+.book.right{
+
+  flex-direction:row-reverse;
+
+}
+
+
+
+.cover{
+
+  width:300px;
+
+  flex:none;
+
+}
+
+
+
+.cover img{
+
+  width:300px;
+
+  height:auto;
+
+  display:block;
+
+}
+
+
+
+.caption{
+
+  margin-top:12px;
+
+  font-family:"Source Serif 4", serif;
+
+  font-size:18px;
+
+  line-height:1.4;
+
+  color:#111;
+
+  text-align:center;
+
+}
+
+
+
+.info{
+
+  flex:1;
+
+  max-width:900px;
+
+}
+
+
+
+.info h2{
+
+  font-family:"Source Serif 4", serif;
+
+  font-size:30px;
+
+  font-weight:400;
+
+  line-height:1.2;
+
+  color:#111;
+
+  margin:0 0 25px;
+
+}
+
+
+
+.description{
+
+  font-family:"Source Serif 4", serif;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+  color:#111;
+
+}
+
+
+
+.description p{
+
+  margin:0 0 22px;
+
+}
+
+
+
+@media(max-width:900px){
+
+  .book,
+  .book.right{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:40px;
+
+  }
+
+
+
+  .cover,
+  .cover img{
+
+    width:240px;
+
+  }
+
+
+
+  .caption{
+
+    font-size:17px;
+
+  }
+
+
+
+  .info h2{
+
+    font-size:26px;
+
+  }
+
+
+
+  .description{
+
+    font-size:19px;
+
+  }
+
+
+}
+
+
+
+</style>

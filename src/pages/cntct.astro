@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="CNTCT">
+
+  <main>
+    <section class="contact">
+
+      <a href="mailto:heymiguelalcazar@gmail.com">
+        heymiguelalcazar@gmail.com
+      </a>
+
+    </section>
+  </main>
+
+</Layout>
+
+<style>
+
+main {
+  width: 100%;
+  min-height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.contact {
+  text-align: center;
+  transform: translateY(-80px);
+}
+
+.contact a {
+  font-size: 22px;
+  color: #111;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.contact a:hover,
+.contact a:focus,
+.contact a:active {
+  color: #4f7fcf;
+}
+
+@media (max-width: 700px) {
+
+  main {
+    min-height: calc(100vh - 180px);
+    padding: 0 20px;
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+
+}
+
+</style>
