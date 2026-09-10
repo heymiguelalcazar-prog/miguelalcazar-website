@@ -8,7 +8,8 @@ import Layout from "../layouts/Layout.astro";
     <section class="contact">
 
       <a href="mailto:heymiguelalcazar@gmail.com">
-        heymiguelalcazar@gmail.com
+        <img src="/images/letter.gif" alt="Email" />
+        <span>heymiguelalcazar@gmail.com</span>
       </a>
 
     </section>
@@ -30,14 +31,23 @@ main {
 
 .contact {
   text-align: center;
-  transform: translateY(-80px);
+  transform: translateY(-100px);
 }
 
 .contact a {
   font-size: 22px;
   color: #111;
   text-decoration: none;
-  transition: color .2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.contact img {
+  width: 300px;
+  height: auto;
+  display: block;
 }
 
 .contact a:hover,
@@ -48,9 +58,8 @@ main {
 
 @media (max-width: 700px) {
 
-  main {
-    min-height: calc(100vh - 180px);
-    padding: 0 20px;
+  .contact img {
+    width: 250px;
   }
 
   .contact a {
